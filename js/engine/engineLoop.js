@@ -1,8 +1,10 @@
 class EngineLoop {
     constructor() {
-        // Any initialization can go here
+        // Initilizes the rendering system
+        Rendering.init();
     }
     
+    // Primary game loop
     loop() {
         Rendering.render();
         requestAnimationFrame(() => this.loop());
