@@ -18,14 +18,11 @@ class Rendering {
         // Clear the screen first
         this.clearScreen();
 
-        // Draw a red rectangle at position (50, 50) with size 100x60
-        RenderTest(this.ctx, 50, 50, 100, 60);
+        // Draw a red rectangle in RenderTest
+        RenderTest(this.ctx, 50, 50, EngineStart.canvas.width - 100, EngineStart.canvas.height - 100, "red");
 
-        // Then render the background
-        //this.renderBackground();
-
-        // Then render the foreground
-        //this.renderForground();
+        // Test layering
+        RenderTest(this.ctx, 100, 100, EngineStart.canvas.width - 200, EngineStart.canvas.height - 200, "blue");
     }
 }
 

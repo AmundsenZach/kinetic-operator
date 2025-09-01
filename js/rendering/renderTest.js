@@ -1,10 +1,9 @@
-// Draws a red rectangle on the canvas
-function RenderTest(ctx, x, y, width, height) {
+function RenderTest(ctx, x, y, width, height, fill) {
     ctx.save();
-    ctx.fillStyle = 'red';
+    // Draws a colored rectangle on the canvas
+    ctx.fillStyle = fill;
     ctx.fillRect(x, y, width, height);
     ctx.restore();
 }
 
-// Expose the function globally if needed
 window.RenderTest = RenderTest;
