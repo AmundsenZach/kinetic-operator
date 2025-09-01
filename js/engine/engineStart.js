@@ -1,5 +1,3 @@
-// Initiation of the engine assets and game loop
-
 const EngineStart = {
     init() {
         // Canvas Initiation

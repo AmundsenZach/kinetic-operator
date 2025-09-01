@@ -17,7 +17,10 @@ class Rendering {
     static render() {
         // Clear the screen first
         this.clearScreen();
-        
+
+        // Draw a red rectangle at position (50, 50) with size 100x60
+        RenderTest(this.ctx, 50, 50, 100, 60);
+
         // Then render the background
         //this.renderBackground();
 

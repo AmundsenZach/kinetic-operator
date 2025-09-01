@@ -1,5 +1,3 @@
-// Event handling in between rendering and input
-
 class EngineEvent {
     constructor() {
         this.listeners = new Map();

@@ -1,17 +1,17 @@
-// Keyboard input and bindings
-
 class KeyboardInput {
     constructor() {
         this.keys = new Set();
-        //this.actions = new Map();
+        this.actions = new Map();
 
         // Bind keydown and keyup events
         window.addEventListener('keydown', (e) => {
             this.keys.add(e.code);
+            console.log(`Key down: ${e.code}`);
         });
 
         window.addEventListener('keyup', (e) => {
             this.keys.delete(e.code);
+            console.log(`Key up: ${e.code}`);
         });
     }
 
