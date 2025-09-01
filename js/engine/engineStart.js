@@ -16,6 +16,9 @@ const EngineStart = {
             
             this.ctx = this.canvas.getContext('2d');
         });
+
+        const engineLoop = new EngineLoop();
+        engineLoop.loop();
     }
 }
 
