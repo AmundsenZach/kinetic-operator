@@ -1,0 +1,11 @@
+B = 'black'
+W = 'white'
+
+b = 'blue'
+g = 'green'
+p = 'purple'
+r = 'red'
+y = 'yellow'
+c = 'cyan'
+m = 'magenta'
+i = ''

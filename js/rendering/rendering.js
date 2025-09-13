@@ -18,11 +18,8 @@ class Rendering {
         // Clear the screen first
         this.clearScreen();
 
-        // Draw a red rectangle in RenderTest
-        RenderTest(this.ctx, 50, 50, EngineStart.canvas.width - 100, EngineStart.canvas.height - 100, "red");
-
-        // Test layering
-        RenderTest(this.ctx, 100, 100, EngineStart.canvas.width - 200, EngineStart.canvas.height - 200, "blue");
+        // Draw the render test
+        RenderTest(this.ctx, 50, 50);
     }
 }
 
