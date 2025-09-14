@@ -3,10 +3,16 @@ class EngineLoop {
         // Initilizes the rendering system
         Rendering.init();
 
+        // Listen for canvasResize event
+        window.engineEvent.on('canvasResize', ({ width, height }) => {
+            EngineStart.canvas.width = width;
+            EngineStart.canvas.height = height;
+            EngineStart.ctx = EngineStart.canvas.getContext('2d');
+        });
+
         // Listen for a custom events
-        this.keyboardInput = new KeyboardInput();
         window.engineEvent.on('gameTick', () => {
-            // Respond to game tick event
+            // Handle per-tick updates here
         });
     }
     

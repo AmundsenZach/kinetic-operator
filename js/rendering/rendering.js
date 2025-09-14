@@ -18,8 +18,8 @@ class Rendering {
         // Clear the screen first
         this.clearScreen();
 
-        // Draw the render test
-        RenderTest(this.ctx, 50, 50);
+        // Draw the render testß
+        RenderTest(this.ctx, this.canvas.width / 2 - (8 * this.canvas.height / 40), this.canvas.height / 2 - (8 * this.canvas.height / 40));
     }
 }
 

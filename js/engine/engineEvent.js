@@ -8,6 +8,7 @@ class EngineEvent {
         if (!this.listeners.has(eventName)) {
             this.listeners.set(eventName, []);
         }
+        
         this.listeners.get(eventName).push(callback);
     }
 

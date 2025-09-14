@@ -1,5 +1,5 @@
-function RenderTest(ctx, startX, startY, pixelSize = 10) {
-    const assetText = "BBBBBBBBB\nBRRRRRRRB\nBRWWWWWRB\nBRRRRRRRB\nBBBBBBBBB"; // Placeholder for asset loading
+function RenderTest(ctx, startX, startY, pixelSize = 35) {
+    const assetText = "BBBBBBBBBBBBBBBB\nBRRRRRRRRRRRRRRB\nBRWWWWWWWWWWWWRB\nBRWWWWWWWWWWWWRB\nBRWWWWWWWWWWWWRB\nBRWWWWWWWWWWWWRB\nBRWWWWWBBWWWWWRB\nBRWWWWWBBWWWWWRB\nBRWWWWWWWWWWWWRB\nBRWWWWWWWWWWWWRB\nBRWWWWWWWWWWWWRB\nBRWWWWWWWWWWWWRB\nBRRRRRRRRRRRRRRB\nBBBBBBBBBBBBBBBB"; // Placeholder for asset loading; // Placeholder for asset loading
 
     // Parse asset into 2D array
     const rows = assetText.trim().split('\n');
@@ -20,7 +20,7 @@ function RenderTest(ctx, startX, startY, pixelSize = 10) {
             }
 
             ctx.fillStyle = color;
-            ctx.fillRect(startX + x * pixelSize, startY + y * pixelSize, pixelSize, pixelSize);
+            ctx.fillRect(startX + x * pixelSize, startY + y * pixelSize, pixelSize + 1, pixelSize + 1);
         }
     }
     ctx.restore();

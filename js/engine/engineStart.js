@@ -8,6 +8,7 @@ const EngineStart = {
         this.canvas.height = window.innerHeight;
 
         // Canvas State Change via EngineEvent
+        window.engineEvent = new EngineEvent();
         window.addEventListener('resize', () => {
             window.engineEvent.emit('canvasResize', {
                 width: window.innerWidth,
@@ -15,18 +16,10 @@ const EngineStart = {
             });
         });
 
-        // Listen for canvasResize event
-        window.engineEvent.on('canvasResize', ({ width, height }) => {
-            this.canvas.width = width;
-            this.canvas.height = height;
-            this.ctx = this.canvas.getContext('2d');
-        });
-
+        // Start the main engine loop
         const engineLoop = new EngineLoop();
         engineLoop.loop();
     }
 }
 
-// Create a global EngineEvent instance
-window.engineEvent = new EngineEvent();
 window.EngineStart = EngineStart;
