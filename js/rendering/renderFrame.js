@@ -1,4 +1,4 @@
-class Rendering {
+class RenderFrame {
     static init() {
         // Calls the canvas to the renderer
         this.ctx = EngineStart.ctx;
@@ -18,9 +18,9 @@ class Rendering {
         // Clear the screen first
         this.clearScreen();
 
-        // Draw the render testß
+        // Draw the render test
         RenderTest(this.ctx, this.canvas.width / 2 - (8 * this.canvas.height / 40), this.canvas.height / 2 - (8 * this.canvas.height / 40));
     }
 }
 
-window.Rendering = Rendering;
+window.RenderFrame = RenderFrame;

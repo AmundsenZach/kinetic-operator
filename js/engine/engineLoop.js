@@ -1,7 +1,7 @@
 class EngineLoop {
     constructor() {
         // Initilizes the rendering system
-        Rendering.init();
+        RenderFrame.init();
 
         // Listen for canvasResize event
         window.engineEvent.on('canvasResize', ({ width, height }) => {
@@ -22,7 +22,7 @@ class EngineLoop {
         window.engineEvent.emit('gameTick');
 
         // Primary game refresh
-        Rendering.render();
+        RenderFrame.render();
         requestAnimationFrame(() => this.loop());
     }
 }
