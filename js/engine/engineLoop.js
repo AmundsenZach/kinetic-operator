@@ -1,28 +1,21 @@
 class EngineLoop {
     constructor() {
-        // Initilizes the rendering system
+        // Initialize timing for delta time calculation
+        this.lastTime = performance.now();
+        
         RenderFrame.init();
-
-        // Listen for canvasResize event
-        window.engineEvent.on('canvasResize', ({ width, height }) => {
-            EngineStart.canvas.width = width;
-            EngineStart.canvas.height = height;
-            EngineStart.ctx = EngineStart.canvas.getContext('2d');
-        });
-
-        // Listen for a custom events
-        window.engineEvent.on('gameTick', () => {
-            // Handle per-tick updates here
-        });
     }
     
-    // Primary game loop
     loop() {
-        // Emit a gameTick event each frame
-        window.engineEvent.emit('gameTick');
-
-        // Primary game refresh
-        RenderFrame.render();
+        const currentTime = performance.now();
+        const deltaTime = currentTime - this.lastTime;
+        this.lastTime = currentTime;
+        
+        // Emit gameTick event with accurate delta time
+        window.engineEvent.emit('gameTick', { 
+            deltaTime: deltaTime 
+        });
+        
         requestAnimationFrame(() => this.loop());
     }
 }
